@@ -8,15 +8,11 @@ db.init_app(app)
 
 @app.route('/talk', methods=["GET", "POST"])
 def talk():
-    for a in User.query.all():
-        print(a.name)
 
-    if request.method == "GET":
-        return render_template("talk_view.html")
-    else:
+    if request.method == "POST":
         return request.form["mytext"]
-
-
+    else:
+        return render_template("talk_view.html")
 
 if __name__ == "__main__":
     app.run()
