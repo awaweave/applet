@@ -1,0 +1,66 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>LINE風チャット画面</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+</head>
+<body>
+  <div class="line__container">
+    <div class="line__title">
+      うさきち友の会
+    </div>
+
+    <div class="line__contents scroll">
+
+      <!-- 相手の吹き出し -->
+      <div class="line__left">
+        <figure>
+          <img src="icon.png" />
+        </figure>
+        <div class="line__left-text">
+          <div class="name">うさきち</div>
+          <div class="text">ねぇねぇ、帰ってくるのおそいんだけど！！今どこいまどこいまどこーー</div>
+        </div>
+      </div>
+
+
+      <!-- 相手の吹き出し -->
+      <div class="line__left">
+        <figure>
+          <img src="icon.png" />
+        </figure>
+        <div class="line__left-text">
+          <div class="name">うさきち</div>
+          <div class="text">今から帰るよー</div>
+        </div>
+      </div>
+
+      <!-- 自分の吹き出し -->
+      <div class="line__right">
+        <div class="text">了解！寝過ごさないようにだよ〜風呂ためとこ</div>
+        <span class="date">既読<br>0:30</span>
+      </div>
+
+
+    </div>
+
+
+  </div>
+    <div class='inputText'>
+      <form action="/talk" method="post">
+        <div class="form-row">
+          <div class="form-group col-sm-10">
+            <input type="text" name="mytext" class="form-control">
+          </div>
+          <div class="form-group col-sm-2">
+            <button type="submit" class="btn btn-primary">送信</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+
+</body>
+</html>
