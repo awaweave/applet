@@ -10,11 +10,14 @@ create table talk_log(
  id integer primary key autoincrement,
  user_id text,
  talk text,
- foreign key(user_id) references user(user_id)
+ pair_id text,
+ read integer,
+ foreign key(user_id) references user(user_id),
+ foreign key(pair_id) references user(user_id)
 );
 
 insert into user values("user1", "うさきち", "password");
 insert into user values("user2", "うさたろう", "password");
-insert into talk_log(user_id, talk) values("user1", "ねぇねぇ、帰ってくるのおそいんだけど！！今どこいまどこいまどこーー");
-insert into talk_log(user_id, talk) values("user1", "今から帰るよー");
-insert into talk_log(user_id, talk) values("user2", "了解！寝過ごさないようにだよ〜風呂ためとこ");
+insert into talk_log values(1,"user1", "ねぇねぇ、帰ってくるのおそいんだけど！！今どこいまどこいまどこーー", "user2", 1);
+insert into talk_log values(2,"user1", "今から帰るよー", "user2", 1);
+insert into talk_log values(3,"user2", "了解！寝過ごさないようにだよ〜風呂ためとこ", "user1", 1);
